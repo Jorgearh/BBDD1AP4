@@ -42,25 +42,82 @@
         <article id="articulo">
             <h2>Eliminar Tipo Bus</h2><br>
             <div>
-                <form action="/EliminarTipoBus" method="get">
+                <form action="/EliminarTipoBus" method="POST">
+                        <label for = 'nombre_tipo'> Nombre Tipo: </label><br>
+                        <input name="nombre_tipo" id = 'nombre_tipo' type = 'text' required><br><br>
 
-                    <label for = 'capacidad_tipo'> Capacidad:</label><br>
-                    <input id = 'capacidad_tipo' type = 'number' required><br><br>
-
-                    <input id = 'submit_201114124' type = 'submit' value = 'Eliminar' >
+                        <input id = 'submit_201114124' type = 'submit' value = 'Eliminar' >
+                    </select>
                 </form>
             </div>
         </article><br>
         <article id="articulo">
             <h2> Modificar Tipo de Bus</h2><br>
             <div>
-                <form action="ModificarTipoBus" method="get">
+                <form action="/ModificarTipoBus" method="POST">
+                    <label for = 'nombre_tipo'> Nombre Tipo: </label><br>
+                    <input name="nombre_tipo" id = 'nombre_tipo' type = 'text' required><br><br>
+
+                    <label for = 'capacidad_tipo'> Capacidad:</label><br>
+                    <input name="capacidad_tipo" id = 'capacidad_tipo' type = 'number' required><br><br>
+
                     <input id = 'submit_201114124' type = 'submit' value = 'Modificar' >
                 </form>
             </div>
         </article>
-
     </section>
+
+
+    <section id="seccion">
+        <h2>Bus</h2><br>
+        <article id="articulo">
+            <h2>Agregar Bus</h2><br>
+            <div>
+                <form action="/InsertarBus" method="post">
+                    <label for = 'modelo_bus'> Modelo bus: </label><br>
+                    <input name="modelo_bus" id = 'modelo_bus' type = 'text' required><br><br>
+
+                    <label for = 'tipo_bus'> Tipo bus:</label><br>
+                    <input name="tipo_bus" id = 'tipo_bus' type = 'number' required><br><br>
+
+                    <input id = 'submit_201114124' type = 'submit' value = 'Guardar' >
+                </form>
+            </div>
+        </article><br>
+        <article id="articulo">
+            <h2>Eliminar Bus</h2><br>
+            <div>
+                <form action="/EliminarBus" method="POST">
+                    <label for = 'id_bus'> ID bus: </label><br>
+                    <input name="id_bus" id = 'id_bus' type = 'text' required><br><br>
+
+                    <input id = 'submit_201114124' type = 'submit' value = 'Eliminar' >
+                    </select>
+                </form>
+            </div>
+        </article><br>
+        <article id="articulo">
+            <h2> Modificar Bus</h2><br>
+            <div>
+                <form action="/ModificarBus" method="POST">
+                    <label for = 'id_bus'> ID bus: </label><br>
+                    <input name="id_bus" id = 'id_bus' type = 'text' required><br><br>
+
+                    <label for = 'ruta_origen'> Ruta origen:</label><br>
+                    <input name="ruta_origen" id = 'ruta_origen' type = 'number' required><br><br>
+
+                    <label for = 'ruta_destino'> Ruta destino:</label><br>
+                    <input name="ruta_destino" id = 'ruta_destino' type = 'number' required><br><br>
+
+                    <label for = 'fecha'> Fecha:</label><br>
+                    <input name="fecha" id = 'fecha' type = 'text' required><br><br>
+
+                    <input id = 'submit_201114124' type = 'submit' value = 'Modificar' >
+                </form>
+            </div>
+        </article>
+    </section>
+
 
     <aside id="columna">
         <h3>Acerca de &eacute;ste m&oacute;dulo</h3>

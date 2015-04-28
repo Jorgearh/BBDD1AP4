@@ -24,13 +24,42 @@
     </nav>
 
     <section id="seccion">
-        <article>
-            <figure>
-                <img src="/images/flota.jpg" alt="" width="500" height="300" align="center">
-                <figcaption>Nuestra flota</figcaption>
-            </figure>
-        </article>
+        <h2>Ruta</h2><br>
+        <article id="articulo">
+            <h2>Agregar Ruta</h2><br>
+            <div>
+                <form action="/InsertarRuta" method="post">
+                    <label for = 'punto_origen'> Punto Origen: </label><br>
+                    <input name="punto_origen" id = 'punto_origen' type = 'text' required><br><br>
+
+                    <label for = 'punto_destino'> Punto Destino:</label><br>
+                    <input name="punto_destino" id = 'punto_destino' type = 'text' required><br><br>
+
+                    <input id = 'submit_201114124' type = 'submit' value = 'Guardar' >
+                </form>
+            </div>
+            <h2>Agregar Punto</h2><br>
+            <div>
+                <form action="/InsertarPuntoRuta" method="post">
+                    <label for = 'punto_origen'> Origen Ruta: </label><br>
+                    <input name="punto_origen" id = 'punto_origen' type = 'text' required><br><br>
+
+                    <label for = 'punto_destino'> Destino Ruta:</label><br>
+                    <input name="punto_destino" id = 'punto_destino' type = 'text' required><br><br>
+
+                    <label for = 'punto'> Punto:</label><br>
+                    <input name="punto" id = 'punto' type = 'text' required><br><br>
+
+                    <label for = 'tiempo'> Tiempo(horas):</label><br>
+                    <input name="tiempo" id = 'tiempo' type = 'tiempo' required><br><br>
+
+                    <input id = 'submit_201114124' type = 'submit' value = 'Guardar' >
+                </form>
+            </div>
+        </article><br>
+
     </section>
+
 
     <aside id="columna">
         <h3>Acerca de &eacute;ste m&oacute;dulo</h3>

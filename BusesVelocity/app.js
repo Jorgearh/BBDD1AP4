@@ -14,6 +14,8 @@ var pagos = require('./routes/pagos');
 var consultas = require('./routes/consultas');
 
 var TipoBus = require('./routes/TipoBus');
+var Bus = require('./routes/Bus');
+var Ruta = require('./routes/Ruta');
 //****
 
 var app = express();
@@ -38,7 +40,17 @@ app.use('/reservaciones', reservaciones);
 app.use('/pagos', pagos);
 app.use('/consultas', consultas);
 
+
 app.post('/InsertarTipoBus', TipoBus.post_insertar_tipo_bus);
+app.post('/EliminarTipoBus', TipoBus.post_eliminar_tipo_bus);
+app.post('/ModificarTipoBus', TipoBus.post_modificar_tipo_bus);
+
+app.post('/InsertarBus', Bus.post_insertar_bus);
+app.post('/EliminarBus', Bus.post_eliminar_bus);
+app.post('/ModificarBus', Bus.post_modificar_bus);
+
+app.post('/InsertarRuta', Ruta.post_insertar_ruta);
+app.post('/InsertarPuntoRuta', Ruta.post_insertar_punto_ruta);
 //***
 
 // catch 404 and forward to error handler
