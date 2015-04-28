@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <title> <%= title %> </title>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="Sitio Web Autobuses Velocity"/>
+    <meta name="keywords" content="Rutas"/>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+<div id = "agrupar">
+    <header id="cabecera">
+        <h1>Autobuses Velocity - Autobuses</h1>
+    </header>
+
+    <nav id="menu">
+        <li>
+            <a class="" href = "/">
+                Inicio
+            </a>
+        </li>
+    </nav>
+
+    <section id="seccion">
+        <h2>Tipo de Bus</h2><br>
+        <article id="articulo">
+            <h2>Agregar Tipo de Bus</h2><br>
+            <div>
+                <form action="/InsertarTipoBus" method="post">
+                    <label for = 'nombre_tipo'> Nombre Tipo: </label><br>
+                    <input name="nombre_tipo" id = 'nombre_tipo' type = 'text' required><br><br>
+
+                    <label for = 'capacidad_tipo'> Capacidad:</label><br>
+                    <input name="capacidad_tipo" id = 'capacidad_tipo' type = 'number' required><br><br>
+
+                    <input id = 'submit_201114124' type = 'submit' value = 'Guardar' >
+                </form>
+            </div>
+        </article><br>
+        <article id="articulo">
+            <h2>Eliminar Tipo Bus</h2><br>
+            <div>
+                <form action="/EliminarTipoBus" method="get">
+
+                    <label for = 'capacidad_tipo'> Capacidad:</label><br>
+                    <input id = 'capacidad_tipo' type = 'number' required><br><br>
+
+                    <input id = 'submit_201114124' type = 'submit' value = 'Eliminar' >
+                </form>
+            </div>
+        </article><br>
+        <article id="articulo">
+            <h2> Modificar Tipo de Bus</h2><br>
+            <div>
+                <form action="ModificarTipoBus" method="get">
+                    <input id = 'submit_201114124' type = 'submit' value = 'Modificar' >
+                </form>
+            </div>
+        </article>
+
+    </section>
+
+    <aside id="columna">
+        <h3>Acerca de &eacute;ste m&oacute;dulo</h3>
+        <p class="acercade">
+            Este es el sitio web de Autobuses Velocity, pensado para que los clientes
+            realicen sus compras en linea y sin necesidad de salir de su hogar.
+        </p>
+    </aside>
+
+    <footer id="pie">
+        <small>
+            Autor: Jorge Antonio Rompiche Herrera<br>
+            <time datetime="2015-04-25" pubdate>publicado 25-04-2015</time>
+        </small>
+
+    </footer>
+</div>
+</body>
+</html>
+
